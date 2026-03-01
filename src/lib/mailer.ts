@@ -1,3 +1,4 @@
+// @ts-ignore - nodemailer v8.0.1 includes bundled types
 import nodemailer from 'nodemailer'
 
 const SMTP_HOST = process.env.SMTP_HOST

@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
+// @ts-ignore - formidable v3.5.2 includes bundled types
 import formidable from 'formidable'
 import fs from 'fs'
 import { saveLocalFile } from '../../../lib/uploads'
