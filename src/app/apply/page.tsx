@@ -165,11 +165,11 @@ const Step4 = ({ onNext }: any) => {
 
 export default function ApplyPage() {
   const [step, setStep] = useState(1)
-  const [data, setData] = useState<any>(() => {
-    try { return JSON.parse(localStorage.getItem('rfz-appl') || 'null') || {} } catch { return {} }
-  })
+  const [data, setData] = useState<any>({})
 
-  useEffect(() => { localStorage.setItem('rfz-appl', JSON.stringify(data)) }, [data])
+  useEffect(() => {
+    localStorage.removeItem('rfz-appl')
+  }, [])
 
   async function handleSubmit(final: any) {
     const fd = new FormData()
