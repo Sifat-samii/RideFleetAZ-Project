@@ -2,6 +2,8 @@
 
 This repository contains a production-minded Next.js (App Router) TypeScript app built for RidefleetAZ — a vehicle rental service for rideshare and gig drivers. The site includes a high-converting multi-step application funnel, admin dashboard, file uploads, email notifications, Prisma DB (SQLite for dev), and basic protections.
 
+https://ridefleetaz.vercel.app/
+
 Quick start
 
 1. Install dependencies
