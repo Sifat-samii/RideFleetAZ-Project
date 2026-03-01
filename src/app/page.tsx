@@ -15,7 +15,7 @@ const vehicles = [
 export default function Home() {
   return (
     <>
-      <Hero title="EARN MORE, FASTER" subtitle="Reliable vehicles for Arizona gig drivers — weekly rentals with no credit check">
+      <Hero title="EARN MORE, FASTER" subtitle="Reliable vehicles for Arizona gig drivers — weekly rentals with no credit check" image="/images/hero1.png">
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
           <Button as={Link} href="/apply" size="lg">Apply Now</Button>
           <Button as={Link} href="/how-it-works" variant="outline" size="lg">How It Works</Button>

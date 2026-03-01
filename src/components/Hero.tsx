@@ -11,7 +11,7 @@ export default function Hero({ title, subtitle, image, children }: HeroProps) {
   return (
     <div className="relative w-full min-h-screen bg-gradient-dark flex items-center justify-center overflow-hidden">
       {image && (
-        <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 opacity-40">
           <img src={image} alt="" className="w-full h-full object-cover" />
         </div>
       )}
