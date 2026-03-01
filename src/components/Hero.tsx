@@ -18,13 +18,13 @@ export default function Hero({ title, subtitle, image, children }: HeroProps) {
           <div 
             className="absolute inset-0"
             style={{
-              background: 'radial-gradient(ellipse at center, rgba(3, 5, 11, 0.1) 0%, rgba(3, 5, 11, 0.6) 50%, rgba(3, 5, 11, 0.98) 100%)'
+              background: 'radial-gradient(ellipse at center, rgba(3, 5, 11, 0.04) 0%, rgba(3, 5, 11, 0.32) 55%, rgba(3, 5, 11, 0.72) 100%)'
             }}
           ></div>
           <div 
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to right, rgba(3, 5, 11, 0.8) 0%, rgba(3, 5, 11, 0.3) 20%, rgba(3, 5, 11, 0.3) 80%, rgba(3, 5, 11, 0.8) 100%), linear-gradient(180deg, transparent 0%, transparent 60%, rgba(3, 5, 11, 0.7) 100%)'
+              background: 'linear-gradient(to right, rgba(3, 5, 11, 0.5) 0%, rgba(3, 5, 11, 0.16) 20%, rgba(3, 5, 11, 0.16) 80%, rgba(3, 5, 11, 0.5) 100%), linear-gradient(180deg, transparent 0%, transparent 68%, rgba(3, 5, 11, 0.42) 100%)'
             }}
           ></div>
         </>

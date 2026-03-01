@@ -14,7 +14,7 @@ interface Lead {
 
 export default function AdminLeadsTable({ leads }: { leads: Lead[] }) {
   return (
-    <div className="bg-dark-800 border border-primary-500/20 rounded-2xl overflow-hidden shadow-card-lg">
+    <div className="overflow-hidden rounded-2xl border border-primary-500/20 bg-dark-800 shadow-card-lg">
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
@@ -37,7 +37,7 @@ export default function AdminLeadsTable({ leads }: { leads: Lead[] }) {
               </tr>
             ) : (
               leads.map((lead) => (
-                <tr key={lead.id} className="border-b border-primary-500/10 hover:bg-dark-700 transition">
+                <tr key={lead.id} className="border-b border-primary-500/10 transition hover:bg-dark-700">
                   <td className="px-6 py-4 text-sm text-gray-400">{new Date(lead.createdAt).toLocaleDateString()}</td>
                   <td className="px-6 py-4 text-sm font-medium text-white">{lead.fullName}</td>
                   <td className="px-6 py-4 text-sm text-gray-400">{lead.phone}</td>
@@ -49,12 +49,7 @@ export default function AdminLeadsTable({ leads }: { leads: Lead[] }) {
                     </Badge>
                   </td>
                   <td className="px-6 py-4 text-sm">
-                    <Button 
-                      size="sm" 
-                      as="a" 
-                      href={`/api/files/${lead.licenseFileUrl}?admin_password=${process.env.ADMIN_PASSWORD}`}
-                      variant="outline"
-                    >
+                    <Button size="sm" as="a" href={`/api/files/${lead.licenseFileUrl}`} variant="outline">
                       Download
                     </Button>
                   </td>

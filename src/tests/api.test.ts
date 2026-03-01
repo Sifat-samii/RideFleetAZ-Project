@@ -1,8 +1,16 @@
-import { describe, it, expect, beforeEach } from 'vitest'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { POST as contactHandler } from '../app/api/contact/route'
 import { POST as adminLoginHandler } from '../app/api/admin/login/route'
 
-function makeRequest(body: any) {
+vi.mock('../lib/contact-inquiries', () => ({
+  createContactInquiry: vi.fn(async () => ({ id: 'contact_1' }))
+}))
+
+vi.mock('../lib/mailer', () => ({
+  sendAdminEmail: vi.fn(async () => undefined)
+}))
+
+function makeRequest(body: unknown) {
   return new Request('http://localhost/api', {
     method: 'POST',
     body: JSON.stringify(body),
@@ -18,31 +26,40 @@ describe('API routes', () => {
     })
 
     it('accepts valid submission', async () => {
-      // mock prisma and mailer or ignore since they may throw
       process.env.ADMIN_EMAIL = 'a@b.com'
       process.env.SMTP_HOST = ''
-      const res = await contactHandler(makeRequest({ name: 'Test', email: 't@e.com', message: 'Hello' }))
+
+      const res = await contactHandler(makeRequest({
+        name: 'Test',
+        email: 't@e.com',
+        message: 'Hello there',
+        phone: '+15555550123'
+      }))
+
       expect(res.status).toBe(200)
       const json = await res.json()
       expect(json.ok).toBe(true)
     })
   })
-  
+
   describe('admin login', () => {
     beforeEach(() => {
       process.env.ADMIN_PASSWORD = 'secret'
     })
+
     it('fails with wrong password', async () => {
       const req = makeRequest({ password: 'nope' })
-      const res: any = await adminLoginHandler(req)
+      const res = await adminLoginHandler(req)
       expect(res.status).toBe(401)
     })
+
     it('succeeds with correct password', async () => {
       const req = makeRequest({ password: 'secret' })
-      const res: any = await adminLoginHandler(req)
+      const res = await adminLoginHandler(req)
       expect(res.status).toBe(200)
       const cookie = res.headers.get('Set-Cookie')
       expect(cookie).toContain('rf_admin=1')
+      expect(cookie).toContain('SameSite=Lax')
     })
   })
 })

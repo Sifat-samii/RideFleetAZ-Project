@@ -41,7 +41,7 @@ Environment variables
 - `UPLOAD_DIR` — optional, defaults to `./uploads`
 
 Uploads
-- Local dev uses `./uploads` (private directory). Files are served via `/api/files/[filename]?admin_password=...` which requires `ADMIN_PASSWORD`.
+- Local dev uses `./uploads` (private directory). Files are served via `/api/files/[filename]` and require an authenticated admin session.
 - There's an `s3Adapter` skeleton in `src/lib/uploads.ts` to implement production S3 uploads.
 
 Admin
