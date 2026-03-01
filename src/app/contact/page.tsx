@@ -37,7 +37,7 @@ export default function Contact() {
       <div className="mx-auto max-w-2xl">
         <div className="mb-8">
           <h1 className="mb-2 text-4xl font-black text-white">Get in Touch</h1>
-          <p className="text-gray-400">Have questions about renting with RidefleetAZ? We're here to help.</p>
+          <p className="text-gray-400">Have questions about renting with RideFleetAZ? We're here to help.</p>
         </div>
         <div className="rounded-2xl border border-primary-500/20 bg-dark-800 p-8 shadow-card-lg">
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">

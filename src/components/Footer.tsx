@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-dark-950 border-t border-primary-500/20">
       <div className="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h3 className="font-black text-lg bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">RidefleetAZ</h3>
+          <h3 className="brand-metal-text text-lg font-black">RideFleetAZ</h3>
           <p className="text-sm text-gray-400 mt-2">Weekly rentals · Unlimited miles · No credit check</p>
         </div>
         <div>
@@ -22,7 +22,7 @@ export default function Footer() {
           <p className="text-sm text-gray-400">Email: hello@ridefleetaz.com</p>
         </div>
       </div>
-      <div className="text-center text-xs py-4 text-gray-500 border-t border-primary-500/20">© {new Date().getFullYear()} RidefleetAZ</div>
+      <div className="text-center text-xs py-4 text-gray-500 border-t border-primary-500/20">© {new Date().getFullYear()} RideFleetAZ</div>
     </footer>
   )
 }

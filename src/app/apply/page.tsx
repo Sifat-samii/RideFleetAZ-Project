@@ -179,7 +179,7 @@ const Step4 = ({ onNext }: Step4Props) => {
           className="mt-1 h-4 w-4 accent-primary-500"
         />
         <label htmlFor="consent" className="text-sm text-gray-300">
-          I consent to RidefleetAZ storing my information for application review and future communications.
+          I consent to RideFleetAZ storing my information for application review and future communications.
         </label>
       </div>
       <Button

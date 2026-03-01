@@ -10,12 +10,12 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export default function Button({ variant = 'primary', loading, disabled, className, children, as: Component = 'button', size = 'md', ...props }: ButtonProps) {
-  const base = 'inline-flex items-center justify-center font-semibold rounded-xl transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-dark-900'
-  const sizeClasses = size === 'sm' ? 'px-3 py-1.5 text-sm' : size === 'lg' ? 'px-8 py-4 text-lg' : 'px-6 py-3'
+  const base = 'inline-flex items-center justify-center font-semibold rounded-lg transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-dark-900'
+  const sizeClasses = size === 'sm' ? 'px-2 py-1 text-sm' : size === 'lg' ? 'px-6 py-3 text-lg' : 'px-4.5 py-2'
   const variants: Record<string, string> = {
-    primary: 'bg-primary-500 text-white hover:bg-primary-600 shadow-glow',
-    outline: 'border-2 border-primary-500 text-primary-400 hover:bg-primary-500/10',
-    secondary: 'bg-accent-500 text-white hover:bg-accent-600'
+    primary: 'metallic-gold-surface text-dark-950 hover:brightness-110 shadow-glow',
+    outline: 'border-2 border-primary-400/70 bg-primary-900/10 text-primary-100 hover:bg-primary-500/12 hover:text-primary-50',
+    secondary: 'metallic-gold-surface text-dark-950 hover:brightness-105 shadow-glow'
   }
   return (
     <Component

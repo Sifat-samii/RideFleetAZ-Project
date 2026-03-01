@@ -29,17 +29,24 @@ export default function Home() {
       </Section>
 
       <Section className="py-24">
-        <h2 className="mb-16 text-center text-5xl font-black text-white md:text-6xl">Why Choose RidefleetAZ</h2>
+        <h2 className="mb-16 text-center text-5xl font-black text-white md:text-6xl">Why Choose RideFleetAZ</h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {[
-            { icon: 'Lightning Fast', title: 'Lightning Fast', desc: 'Approval in 24 hours' },
-            { icon: 'No Credit Check', title: 'No Credit Check', desc: 'Simple, transparent process' },
-            { icon: 'Maintenance Included', title: 'Maintenance Included', desc: 'Stay on the road worry-free' },
-            { icon: 'Unlimited Miles', title: 'Unlimited Miles', desc: 'Drive as much as you want' }
+            { icon: '01', title: 'Lightning Fast', desc: 'Approval in 24 hours' },
+            { icon: '02', title: 'No Credit Check', desc: 'Simple, transparent process' },
+            { icon: '03', title: 'Maintenance Included', desc: 'Stay on the road worry-free' },
+            { icon: '04', title: 'Unlimited Miles', desc: 'Drive as much as you want' }
           ].map((benefit) => (
-            <div key={benefit.title} className="rounded-2xl border border-primary-500/30 bg-dark-800 p-6 transition hover:border-primary-400">
-              <div className="mb-3 text-lg font-semibold text-primary-300">{benefit.icon}</div>
-              <h3 className="text-lg font-bold text-white">{benefit.title}</h3>
+            <div
+              key={benefit.title}
+              className="rounded-2xl border border-[#bfa46a]/30 bg-[linear-gradient(145deg,rgba(44,47,54,0.92)_0%,rgba(23,26,32,0.96)_45%,rgba(56,60,67,0.9)_100%)] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_18px_40px_rgba(0,0,0,0.32)] transition hover:border-[#d7bf8b]/45"
+            >
+              <div className="metallic-gold-surface mb-4 inline-flex rounded-full px-3 py-1 text-sm font-bold tracking-[0.24em] text-dark-950">
+                {benefit.icon}
+              </div>
+              <h3 className="metallic-gold-text text-lg font-bold">
+                {benefit.title}
+              </h3>
               <p className="mt-2 text-sm text-gray-400">{benefit.desc}</p>
             </div>
           ))}
@@ -68,7 +75,7 @@ export default function Home() {
 
       <Section className="py-24 text-center">
         <h2 className="mb-6 text-4xl font-black text-white">Ready to Start Earning?</h2>
-        <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-300">Join hundreds of Arizona drivers who trust RidefleetAZ for their rental needs.</p>
+        <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-300">Join hundreds of Arizona drivers who trust RideFleetAZ for their rental needs.</p>
         <Button as={Link} href="/apply" size="lg">Get Started Today</Button>
       </Section>
     </>
