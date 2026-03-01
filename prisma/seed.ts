@@ -11,7 +11,7 @@ async function main() {
         fullName: 'Maria Gomez',
         phone: '+15555550123',
         email: 'maria@example.com',
-        licenseFile: 'seed/license-maria.jpg',
+        licenseFileUrl: 'seed/license-maria.jpg',
         status: 'NEW'
       }
     ]

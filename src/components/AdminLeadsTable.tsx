@@ -9,7 +9,7 @@ interface Lead {
   email: string
   platforms: string[]
   status: string
-  licenseFile: string
+  licenseFileUrl: string
 }
 
 export default function AdminLeadsTable({ leads }: { leads: Lead[] }) {
@@ -52,7 +52,7 @@ export default function AdminLeadsTable({ leads }: { leads: Lead[] }) {
                     <Button 
                       size="sm" 
                       as="a" 
-                      href={`/api/files/${lead.licenseFile}?admin_password=${process.env.ADMIN_PASSWORD}`}
+                      href={`/api/files/${lead.licenseFileUrl}?admin_password=${process.env.ADMIN_PASSWORD}`}
                       variant="outline"
                     >
                       Download

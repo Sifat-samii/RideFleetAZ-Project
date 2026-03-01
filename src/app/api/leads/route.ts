@@ -55,7 +55,7 @@ export async function POST(req: NextRequest) {
       fullName,
       phone,
       email,
-      licenseFile: filename
+      licenseFileUrl: filename
     }})
 
     // notify admin

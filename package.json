@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "postinstall": "prisma generate",
+    "build": "prisma generate && next build",
     "start": "next start",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev --name init",
@@ -16,7 +17,6 @@
     "@aws-sdk/s3-request-presigner": "^3.1000.0",
     "@hookform/resolvers": "^3.9.0",
     "@prisma/client": "^5.22.0",
-    "clsx": "^2.1.1",
     "formidable": "^3.5.2",
     "next": "^16.1.6",
     "nodemailer": "^8.0.1",
@@ -24,14 +24,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.51.3",
-    "tailwind-merge": "^3.5.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@testing-library/react": "^14.2.1",
-    "@types/formidable": "^3.4.7",
     "@types/node": "^20.11.30",
-    "@types/nodemailer": "^7.0.11",
     "@types/react": "^18.2.66",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
