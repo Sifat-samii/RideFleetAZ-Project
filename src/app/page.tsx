@@ -8,15 +8,15 @@ import Card from '../components/Card'
 import Section from '../components/Section'
 
 const vehicles = [
-  { id: '1', image: '/Images/Daily_drivers.png', title: 'Reliable Daily Drivers', description: 'Perfect for Uber, Lyft, and everyday gig work with excellent fuel efficiency.' },
-  { id: '2', image: '/Images/SUV.png', title: 'Spacious SUVs', description: 'Great for UberX, Lyft Plus, and larger passenger loads with comfort.' },
-  { id: '3', image: '/Images/cargo_van.png', title: 'Cargo Vans', description: 'Ideal for DoorDash, Amazon Flex, and delivery with maximum cargo space.' }
+  { id: '1', image: '/images/Daily_drivers.png', title: 'Reliable Daily Drivers', description: 'Perfect for Uber, Lyft, and everyday gig work with excellent fuel efficiency.' },
+  { id: '2', image: '/images/SUV.png', title: 'Spacious SUVs', description: 'Great for UberX, Lyft Plus, and larger passenger loads with comfort.' },
+  { id: '3', image: '/images/cargo_van.png', title: 'Cargo Vans', description: 'Ideal for DoorDash, Amazon Flex, and delivery with maximum cargo space.' }
 ]
 
 export default function Home() {
   return (
     <>
-      <Hero title="EARN MORE, FASTER" subtitle="Reliable vehicles for Arizona gig drivers — weekly rentals with no credit check" image="/Images/hero3.png">
+      <Hero title="EARN MORE, FASTER" subtitle="Reliable vehicles for Arizona gig drivers - weekly rentals with no credit check" image="/images/hero3.png">
         <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
           <Button as={Link} href="/apply" size="lg">Apply Now</Button>
           <Button as={Link} href="/how-it-works" variant="outline" size="lg">How It Works</Button>
@@ -32,13 +32,13 @@ export default function Home() {
         <h2 className="mb-16 text-center text-5xl font-black text-white md:text-6xl">Why Choose RidefleetAZ</h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {[
-            { icon: '⚡', title: 'Lightning Fast', desc: 'Approval in 24 hours' },
-            { icon: '🔒', title: 'No Credit Check', desc: 'Simple, transparent process' },
-            { icon: '🔧', title: 'Maintenance Included', desc: 'Stay on the road worry-free' },
-            { icon: '∞', title: 'Unlimited Miles', desc: 'Drive as much as you want' }
+            { icon: 'Lightning Fast', title: 'Lightning Fast', desc: 'Approval in 24 hours' },
+            { icon: 'No Credit Check', title: 'No Credit Check', desc: 'Simple, transparent process' },
+            { icon: 'Maintenance Included', title: 'Maintenance Included', desc: 'Stay on the road worry-free' },
+            { icon: 'Unlimited Miles', title: 'Unlimited Miles', desc: 'Drive as much as you want' }
           ].map((benefit) => (
             <div key={benefit.title} className="rounded-2xl border border-primary-500/30 bg-dark-800 p-6 transition hover:border-primary-400">
-              <div className="mb-3 text-4xl">{benefit.icon}</div>
+              <div className="mb-3 text-lg font-semibold text-primary-300">{benefit.icon}</div>
               <h3 className="text-lg font-bold text-white">{benefit.title}</h3>
               <p className="mt-2 text-sm text-gray-400">{benefit.desc}</p>
             </div>
