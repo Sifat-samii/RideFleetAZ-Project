@@ -7,23 +7,23 @@ import Card from '../components/Card'
 import Section from '../components/Section'
 
 const vehicles = [
-  { id: '1', image: '🚗', title: 'Reliable Daily Drivers', description: 'Perfect for Uber, Lyft, and everyday gig work with excellent fuel efficiency.' },
-  { id: '2', image: '🚙', title: 'Spacious SUVs', description: 'Great for UberX, Lyft Plus, and larger passenger loads with comfort.' },
-  { id: '3', image: '🚐', title: 'Cargo Vans', description: 'Ideal for DoorDash, Amazon Flex, and delivery with maximum cargo space.' }
+  { id: '1', image: '/images/Daily_drivers.png', title: 'Reliable Daily Drivers', description: 'Perfect for Uber, Lyft, and everyday gig work with excellent fuel efficiency.' },
+  { id: '2', image: '/images/SUV.png', title: 'Spacious SUVs', description: 'Great for UberX, Lyft Plus, and larger passenger loads with comfort.' },
+  { id: '3', image: '/images/cargo_van.png', title: 'Cargo Vans', description: 'Ideal for DoorDash, Amazon Flex, and delivery with maximum cargo space.' }
 ]
 
 export default function Home() {
   return (
     <>
-      <Hero title="EARN MORE, FASTER" subtitle="Reliable vehicles for Arizona gig drivers — weekly rentals with no credit check" image="/images/hero1.png">
+      <Hero title="EARN MORE, FASTER" subtitle="Reliable vehicles for Arizona gig drivers — weekly rentals with no credit check" image="/images/hero2.png">
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
           <Button as={Link} href="/apply" size="lg">Apply Now</Button>
           <Button as={Link} href="/how-it-works" variant="outline" size="lg">How It Works</Button>
         </div>
       </Hero>
 
-      <Section bg="dark-800" className="py-24">
-        <h2 className="text-4xl font-black text-center mb-16 text-white">Our Fleet</h2>
+      <Section bg="dark-900" className="py-24">
+        <h2 className="text-4xl font-black text-center mb-4 text-white">Our Fleet</h2>
         <Carousel items={vehicles} />
       </Section>
 
