@@ -3,20 +3,8 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
-}
-
-model Lead {
-  id            String   @id @default(cuid())
-  createdAt     DateTime @default(now())
-  readyNow      Boolean
-  platforms     String[]
-  fullName      String
-  phone         String
-  email         String
-  licenseFile   String
-  status        LeadStatus @default(NEW)
 }
 
 enum LeadStatus {
@@ -24,6 +12,18 @@ enum LeadStatus {
   REVIEWING
   QUALIFIED
   NOT_QUALIFIED
+}
+
+model Lead {
+  id             String     @id @default(cuid())
+  createdAt      DateTime   @default(now())
+  readyNow       Boolean
+  platforms      String[]
+  fullName       String
+  phone          String
+  email          String
+  licenseFileUrl String
+  status         LeadStatus @default(NEW)
 }
 
 model ContactInquiry {
